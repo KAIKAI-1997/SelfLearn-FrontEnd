@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rolling promo</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        div {
+            position: relative;
+            height: 280px;
+            width: 520px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        div img {
+            position: absolute;
+            width: 100%;
+        }
+
+        div .prev {
+            position: absolute;
+            left: 0px;
+            height: 30px;
+            width: 30px;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, .3);
+            top: 50%;
+            margin-top: -15px;
+            color: black;
+            text-align: center;
+            line-height: 30px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 20px;
+        }
+
+        div .after {
+            position: absolute;
+            right: 0px;
+            height: 30px;
+            width: 30px;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, .5);
+            top: 50%;
+            margin-top: -15px;
+            color: black;
+            text-align: center;
+            line-height: 30px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            font-size: 20px;
+        }
+
+        .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            background-color: rgba(255, 255, 255, .7);
+            border-radius: 6.5px;
+        }
+
+        .promo-nav li {
+            float: left;
+            height: 8px;
+            width: 8px;
+            background-color: white;
+            border-radius: 4px;
+            margin: 3px;
+        }
+
+        .promo-nav li:hover {
+            background-color: #ff5000;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="tb.jpg" alt="">
+        <a href="#" class="prev"> &lt </a>
+        <a href="#" class="after"> &gt </a>
+        <ul class="promo-nav">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+    </div>
+</body>
+
+</html>
