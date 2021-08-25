@@ -293,11 +293,11 @@ body{
 
 }
 
-.box-body ul li > img{
+.box-body ul li .show{
     width: 100%;
 }
 
-.box-body ul li em{
+.box-body ul li > img{
     position: absolute;
     top: 4px;
     right: -4px;
@@ -306,13 +306,15 @@ body{
 .box-body ul li h4{
     margin: 20px 20px 20px 25px;
     font-size: 14px;
-
     font-weight: 400;
-}
-
-.box-body ul li h4 a{
     color: #050505;
 }
+
+.box-body ul li h4:hover{
+    color: skyblue;
+}
+
+
 
 .box-body ul li .info{
     margin: 0 20px 0 25px;
