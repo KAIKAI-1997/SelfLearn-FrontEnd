@@ -111,6 +111,7 @@ body{
 }
 
 .user .user_name{
+    vertical-align: middle;
     float: left;
     line-height: 42px;
 }
