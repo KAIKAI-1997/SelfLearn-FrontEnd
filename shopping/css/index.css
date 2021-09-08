@@ -199,6 +199,124 @@ main .newsflash {
 }
 
 .you_like {
-    height: 258px;
-    background-color: pink;
+    height: 270px;
+    margin-top: 10px;
+    /* background-color: pink; */
+}
+
+.you_like .like_hd {
+    height: 28px;
+    margin-bottom: 10px;
+}
+
+.like_hd h4 {
+    float: left;
+    font-size: 18px;
+    color: #333333;
+    line-height: 28px;
+    padding-left: 10px;
+}
+
+.like_hd button {
+    float: right;
+    line-height: 28px;
+    padding-right: 10px;
+    background-color: transparent;
+}
+
+.like_hd button a::after {
+    content: '\ea2e';
+    font-family: 'icomoon';
+}
+
+.like_bd ul li {
+    float: left;
+    margin: 0 0;
+}
+
+.floor {
+    margin-top: 30px;
+}
+
+.box_hd {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+
+.box_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+    font-weight: 400;
+}
+
+.box_hd ul {
+    float: right;
+}
+
+.box_hd ul li {
+    float: left;
+    line-height: 30px;
+}
+
+.box_hd ul li a {
+    margin: 0 15px;
+}
+
+.box_bd {
+    height: 361px;
+}
+
+.table_list_item ul li {
+    float: left;
+}
+
+.col_1 {
+    height: 361px;
+    background-color: #f9f9f9;
+    width: 210px;
+    text-align: center;
+}
+
+.col_1 ul {
+    padding-left: 12px;
+}
+
+.col_1 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    text-align: center;
+    line-height: 33px;
+    border-bottom: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.col_2 {
+    width: 329px;
+}
+
+.col_3 {
+    width: 221PX;
+    border-right: 1PX solid #ccc;
+}
+
+.col_4 {
+    width: 221px;
+    border-right: 1PX solid #ccc;
+}
+
+.col_5 {
+    width: 219px;
+    border-right: 1PX solid #ccc;
+}
+
+.col_3 a:nth-child(1),
+.col_5 a:nth-child(1) {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.mobile_phone {
+    margin-top: 30px;
 }
