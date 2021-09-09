@@ -1,0 +1,59 @@
+.mid {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.style_red {
+    color: #c81523;
+}
+
+header {
+    height: 84px;
+    border-bottom: 2px solid #c81523;
+}
+
+header img {
+    padding-top: 18px;
+}
+
+.register_area {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.register_area .regist_hd {
+    height: 42px;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+    line-height: 42px;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.login {
+    float: right;
+    font-size: 14px;
+}
+
+.reg_form {
+    width: 600px;
+    background-color: pink;
+    margin: 50px auto 0;
+}
+
+.reg_form ul li label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+
+.reg_form ul li input {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #ccc;
+}
+
+.error {
+    color: #c81523;
+}
