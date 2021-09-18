@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Web simulation to https://isooc.github.io/. KAIKAI self-learn front-end">
+    <meta name="keyword" content="self-learn front-end KAIKAI">
+    <title>pinyougou-login</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <header class="mid">
+        <a href="index.html"></a>
+        <h1>
+            品优购登录
+        </h1>
+    </header>
+
+    <div class="main mid">
+        <div class="box">
+            <input type="text" placeholder="input account">
+        </div>
+        <div class="box">
+            <input type="password" id="password" placeholder="input password">
+            <img src="imgs/close.png" alt="" id="eye">
+            <div class="forget"><a href="#">忘记密码</a></div>
+        </div>
+        <script>
+            var eye = document.getElementById('eye');
+            var password = document.getElementById('password');
+            var flag = 0;
+
+            eye.onclick = function() {
+                if (flag == 0) {
+                    password.type = 'text';
+                    eye.src = 'imgs/open.png';
+                    flag = 1;
+                } else {
+                    password.type = 'password';
+                    eye.src = 'imgs/close.png';
+                    flag = 0;
+                }
+            }
+        </script>
+        <div class="login_bnutton">
+            <a href="#">登录</a>
+        </div>
+        <div class="sign mid">
+            <div class="vertify_code">短信验证码登录</div>
+            <div class="signup"><a href="signup.html">快速注册</a></div>
+        </div>
+        <div class="private mid">
+            登录即代表您同意<a href="#">京东隐私条款</a>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
