@@ -46,16 +46,21 @@
         var icon = document.querySelectorAll('.mess_icon');
 
         for (var i = 0; i < ipt.length; i++) {
-            k = i;
             ipt[i].onblur = function() {
+                for (var j = 0; j < ipt.length; j++) {
+                    if (ipt[j].value.length) {
+                        k = j;
+                    }
+                }
+
                 if (this.value.length != 0 && this.value.length < 6 || this.value.length > 16) {
-                    icon[0].className = 'error_icon';
-                    message[0].className = 'error';
-                    message[0].innerHTML = '格式错误';
+                    icon[k].className = 'error_icon';
+                    message[k].className = 'error';
+                    message[k].innerHTML = '格式错误';
                 } else if (this.value.length != 0) {
-                    icon[0].className = 'success_icon';
-                    message[0].className = 'success';
-                    message[0].innerHTML = '格式正确';
+                    icon[k].className = 'success_icon';
+                    message[k].className = 'success';
+                    message[k].innerHTML = '格式正确';
                 }
             }
         }
