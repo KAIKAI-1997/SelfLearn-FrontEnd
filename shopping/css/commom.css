@@ -61,8 +61,11 @@
     position: relative;
     z-index: 1;
     height: 120px;
-    color: #ccc;
     background-color: rgba(85, 84, 84, 0.8);
+}
+
+.scroll_down a:hover {
+    color: #ccc!important;
 }
 
 

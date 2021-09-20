@@ -28,17 +28,38 @@
         <div class="reg_form">
             <form action="">
                 <ul>
-                    <li><label for="">手机号：</label> <input type="text" class="input"> <span class="error"> <i class="error_icon"></i> 手机号：格式不正确，请重新输入</span></li>
-                    <li><label for="">短信验证码：</label> <input type="text" class="input"> <span class="success"> <i class="success_icon"></i> 短信验证码格式正确</span></li>
-                    <li><label for="">登录密码：</label> <input type="password" class="input"> <span class="error"> <i class="error_icon"></i> 登录密码格式不正确，请重新输入</span></li>
+                    <li><label for="">手机号：</label> <input type="text" class="input"> <span> <i class="mess_icon"></i> <p class="mess">请输入6-16位字符</p></span></li>
+                    <li><label for="">短信验证码：</label> <input type="text" class="input"> <span> <i class="mess_icon"></i> <p  class="mess">请输入6-16位字符</p></span></li>
+                    <li><label for="">登录密码：</label> <input type="password" class="input"> <span> <i class="mess_icon"></i> <p  class="mess">请输入6-16位字符</p></span></li>
                     <li class="safe">安全程度 <em class="weak">弱</em> <em class="middle">中</em> <em class="strong">强</em></li>
-                    <li><label for="">确认密码：</label> <input type="password" class="input"> <span class="error"> <i class="error_icon"></i> 确认密码格式不正确，请重新输入</span></li>
+                    <li><label for="">确认密码：</label> <input type="password" class="input"> <span> <i class="mess_icon"></i> <p  class="mess">请输入6-16位字符</p></span></li>
                     <li class="agree"><input type="checkbox" name="" id=""> 同意协议并注册 <a href="#">《用户协议》</a></li>
                     <li><input type="submit" value="提交注册" class="upload"></li>
                 </ul>
             </form>
         </div>
     </div>
+
+    <script>
+        var ipt = document.querySelectorAll('.input');
+        var message = document.querySelectorAll('.mess');
+        var icon = document.querySelectorAll('.mess_icon');
+
+        for (var i = 0; i < ipt.length; i++) {
+            k = i;
+            ipt[i].onblur = function() {
+                if (this.value.length != 0 && this.value.length < 6 || this.value.length > 16) {
+                    icon[0].className = 'error_icon';
+                    message[0].className = 'error';
+                    message[0].innerHTML = '格式错误';
+                } else if (this.value.length != 0) {
+                    icon[0].className = 'success_icon';
+                    message[0].className = 'success';
+                    message[0].innerHTML = '格式正确';
+                }
+            }
+        }
+    </script>
 
     <!-- footer -->
     <footer>

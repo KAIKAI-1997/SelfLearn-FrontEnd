@@ -57,17 +57,22 @@ header img {
     border: 1px solid #ccc;
 }
 
+.reg_form ul li p {
+    display: inline-block;
+}
+
 .error {
     color: #c81523;
 }
 
 .success_icon,
-.error_icon {
+.error_icon,
+.mess_icon {
     display: inline-block;
     vertical-align: middle;
     width: 20px;
     height: 20px;
-    background: url(../imgs/error.png);
+    background: url(../imgs/error.png) no-repeat;
     margin-top: -2px;
 }
 
@@ -75,8 +80,18 @@ header img {
     color: green;
 }
 
+.mess {
+    color: #999;
+}
+
 .success_icon {
-    background: url(../imgs/success.png);
+    background: url(../imgs/right.png) no-repeat 3px 2px;
+    ;
+}
+
+.mess_icon {
+    background-image: url(../imgs/mess.png);
+    background-position: 3px 2px;
 }
 
 .safe {
@@ -109,7 +124,7 @@ header img {
 }
 
 .agree a {
-    color: #1ba1e6
+    color: #1ba1e6;
 }
 
 .upload {
