@@ -12,9 +12,25 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/commom.css">
     <link rel="stylesheet" href="css/index.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var m = document.querySelector('#mousefollow');
+            document.addEventListener('mousemove', function(e) {
+                var x = e.pageX;
+                var y = e.pageY;
+
+                m.style.left = x - 20 + 'px';
+                m.style.top = y - 25 + 'px';
+            });
+        });
+    </script>
 </head>
 
 <body>
+    <!-- mousefollow -->
+    <img src="imgs/angel.gif" alt="" id="mousefollow">
+
+
     <!-- shortcut -->
     <section class="shortcut">
         <div class="mid">

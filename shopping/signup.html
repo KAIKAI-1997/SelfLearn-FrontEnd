@@ -46,14 +46,11 @@
         var icon = document.querySelectorAll('.mess_icon');
 
         for (var i = 0; i < ipt.length; i++) {
+            ipt[i].setAttribute('data-index', i);
+            console.log(ipt);
             ipt[i].onblur = function() {
-                for (var j = 0; j < ipt.length; j++) {
-                    if (ipt[j].value.length) {
-                        k = j;
-                    }
-                }
-
                 if (this.value.length != 0 && this.value.length < 6 || this.value.length > 16) {
+                    k = this.getAttribute('data-index');
                     icon[k].className = 'error_icon';
                     message[k].className = 'error';
                     message[k].innerHTML = '格式错误';
@@ -61,6 +58,10 @@
                     icon[k].className = 'success_icon';
                     message[k].className = 'success';
                     message[k].innerHTML = '格式正确';
+                } else {
+                    icon[k].className = 'mess_icon';
+                    message[k].className = 'mess';
+                    message[k].innerHTML = '请输入6-16位字符';
                 }
             }
         }
