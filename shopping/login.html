@@ -21,14 +21,19 @@
     </header>
 
     <div class="main mid">
-        <div class="box">
-            <input type="text" placeholder="input account">
-        </div>
-        <div class="box">
-            <input type="password" id="password" placeholder="input password">
-            <img src="imgs/close.png" alt="" id="eye">
-            <div class="forget"><a href="#">忘记密码</a></div>
-        </div>
+        <form action="redirect.html">
+            <div class="box">
+                <input type="text" name="name" placeholder="input account">
+            </div>
+            <div class="box">
+                <input type="password" id="password" placeholder="input password" name="password">
+                <img src="imgs/close.png" alt="" id="eye">
+                <div class="forget"><a href="#">忘记密码</a></div>
+            </div>
+            <input type="submit" value="登录" class="login_bnutton">
+        </form>
+
+
         <script>
             var eye = document.getElementById('eye');
             var password = document.getElementById('password');
@@ -46,9 +51,6 @@
                 }
             }
         </script>
-        <div class="login_bnutton">
-            <a href="#">登录</a>
-        </div>
         <div class="sign mid">
             <div class="vertify_code">短信验证码登录</div>
             <div class="signup"><a href="signup.html">快速注册</a></div>

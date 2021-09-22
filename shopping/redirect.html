@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="self-learn front-end KAIKAI">
+    <title>redirection</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='hello'></div>
+    <script>
+        var name = location.search;
+        name = name.substr(1);
+        var data = name.split('&');
+        var account = data[0].split('=');
+        document.querySelector('.hello').innerHTML = "你好" + account[1];
+    </script>
+    <div class="count_down">5秒后自动跳转页面</div>
+    <script>
+        var timer = 5;
+        var down = document.querySelector('.count_down');
+        setInterval(() => {
+            if (timer == 0) {
+                window.location.href = "index.html";;
+            } else {
+                down.innerHTML = timer + "秒后自动跳转页面";
+                timer--;
+            };
+        }, 1000);
+    </script>
+    <div>
+        <a href="index.html">立即跳转</a>
+    </div>
+</body>
+
+</html>

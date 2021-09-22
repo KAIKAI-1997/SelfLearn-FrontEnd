@@ -229,8 +229,17 @@
     color: #c81623;
 }
 
+.navitems {
+    margin-left: 35px;
+}
+
 .navitems ul li {
     float: left;
+    margin-left: 50px;
+}
+
+.navitems ul li:hover {
+    background-color: skyblue;
 }
 
 .navitems ul li a {
