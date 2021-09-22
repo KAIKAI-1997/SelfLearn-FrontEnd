@@ -1,7 +1,8 @@
 #mousefollow {
     position: absolute;
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
+    z-index: 100;
 }
 
 main {
@@ -325,4 +326,61 @@ main .newsflash {
 
 .mobile_phone {
     margin-top: 30px;
+}
+
+.load_ad {
+    display: inline;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    height: 600px;
+    width: 400px;
+    background-color: #e2424d;
+}
+
+.close_icon {
+    position: absolute;
+    top: 0;
+    right: -11px;
+    height: 18px;
+    width: 11px;
+    font-size: 15px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.load_ad ul li {
+    height: 150px;
+    font-size: 43px;
+    text-align: center;
+    line-height: 50px;
+    padding-top: 20px;
+    color: #ccc;
+}
+
+.load_ad ul li:first-child {
+    font-size: 70px;
+    padding-top: 80px;
+    color: rgb(231, 231, 231);
+}
+
+.load_ad ul li:nth-child(2) {
+    height: 100px
+}
+
+.load_ad ul .count_down {
+    padding-top: 0;
+    /* background-color: #fff; */
+}
+
+.load_ad ul .count_down div {
+    display: inline-block;
+    height: 130px;
+    width: 120px;
+    background-color: rgb(37, 35, 35);
+    text-align: center;
+    line-height: 130px;
+    font-size: 60px;
 }

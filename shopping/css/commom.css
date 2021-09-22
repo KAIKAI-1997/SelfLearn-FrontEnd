@@ -176,6 +176,8 @@
 }
 
 .nav .dropdown {
+    position: absolute;
+    z-index: 1;
     float: left;
     width: 210px;
     height: 45px;
@@ -343,4 +345,8 @@ footer {
 .add {
     line-height: 20px;
     font-size: 13px;
+}
+
+.main {
+    position: relative;
 }
