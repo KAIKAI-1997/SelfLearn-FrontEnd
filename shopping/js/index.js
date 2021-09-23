@@ -11,6 +11,21 @@ function animate(obj, interval_time, callback) {
         }
         obj.style.left = obj.offsetLeft + step + "px";
     }, 15);
+}
+
+function window_animate(obj, interval_time, callback) {
+    clearInterval(obj.timer);
+    obj.timer = setInterval(function() {
+        var step = (interval_time - window.pageYOffset) / 10;
+        step = step > 0 ? Math.ceil(step) : Math.floor(step);
+        if (window.pageYOffset == interval_time) {
+            clearInterval(obj.timer);
+            if (callback) {
+                callback();
+            }
+        }
+        window.scroll(0, window.pageYOffset + step)
+    }, 15);
 
 }
 

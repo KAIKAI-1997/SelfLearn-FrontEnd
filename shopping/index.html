@@ -647,8 +647,16 @@
 
     <!-- go_back -->
     <div class="go_back">
-        <a href="#"></a>
+        <a href="javascript:;"></a>
     </div>
+    <script>
+        var back_top = document.querySelector('.go_back');
+
+        back_top.addEventListener('click', function() {
+            window_animate(window, 0);
+        })
+    </script>
+
 
 </body>
 
