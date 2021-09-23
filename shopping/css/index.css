@@ -384,3 +384,52 @@ main .newsflash {
     line-height: 130px;
     font-size: 60px;
 }
+
+.slider-bar {
+    position: absolute;
+    z-index: 11;
+    top: 300px;
+    right: 220px;
+    height: 180px;
+    width: 35px;
+    background-color: #ccc;
+    border-radius: 7px;
+}
+
+.slider-bar ul li {
+    height: 45px;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.slider-bar ul li:first-child {
+    background-color: orange;
+    border-radius: 7px;
+}
+
+.slider-bar ul li:nth-child(3) {
+    border-top: 1px solid black;
+    line-height: 45px;
+}
+
+.slider-bar ul li:nth-child(4) {
+    border-top: 1px solid black;
+    line-height: 45px;
+}
+
+.go_back a::after {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    content: '\ea3a';
+    font-family: 'icomoon';
+    height: 30px;
+    width: 30px;
+    border: 1px solid skyblue;
+    color: skyblue;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}

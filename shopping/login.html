@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js"></script>
 </head>
 
 <body>
@@ -32,25 +33,6 @@
             </div>
             <input type="submit" value="登录" class="login_bnutton">
         </form>
-
-
-        <script>
-            var eye = document.getElementById('eye');
-            var password = document.getElementById('password');
-            var flag = 0;
-
-            eye.onclick = function() {
-                if (flag == 0) {
-                    password.type = 'text';
-                    eye.src = 'imgs/open.png';
-                    flag = 1;
-                } else {
-                    password.type = 'password';
-                    eye.src = 'imgs/close.png';
-                    flag = 0;
-                }
-            }
-        </script>
         <div class="sign mid">
             <div class="vertify_code">短信验证码登录</div>
             <div class="signup"><a href="signup.html">快速注册</a></div>
@@ -58,9 +40,6 @@
         <div class="private mid">
             登录即代表您同意<a href="#">京东隐私条款</a>
         </div>
-
-
-
     </div>
 </body>
 

@@ -12,24 +12,10 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/commom.css">
     <link rel="stylesheet" href="css/index.css">
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var m = document.querySelector('#mousefollow');
-            document.addEventListener('mousemove', function(e) {
-                var x = e.pageX;
-                var y = e.pageY;
-
-                m.style.left = x + 5 + 'px';
-                m.style.top = y + 5 + 'px';
-            });
-        });
-    </script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
-    <!-- mousefollow -->
-    <img src="imgs/angel.gif" alt="" id="mousefollow">
-
     <!-- shortcut -->
     <section class="shortcut">
         <div class="mid">
@@ -660,6 +646,55 @@
             </div>
         </div>
     </footer>
+
+    <!-- mousefollow -->
+    <img src="imgs/angel.gif" alt="" id="mousefollow">
+
+    <div class="slider-bar">
+        <ul>
+            <li><a href="#">精选推荐</a></li>
+            <li><a href="#">联系客服</a></li>
+            <li><a href="#">投诉</a></li>
+            <li><a href="#">其他</a></li>
+        </ul>
+    </div>
+
+    <script>
+        var slide = document.querySelector('.slider-bar');
+        console.log(slide);
+        document.addEventListener('scroll', function() {
+            console.log(window.pageYOffset);
+            if (window.pageYOffset >= 200) {
+                slide.style.position = 'fixed';
+                slide.style.top = 100 + 'px';
+
+            } else if (window.pageYOffset < 200 || window.pageYOffset >= 1400) {
+                slide.style.position = 'absolute';
+                slide.style.top = '300px';
+            }
+        })
+    </script>
+
+    <!-- go_back -->
+    <div class="go_back">
+        <a href="#"></a>
+    </div>
+
+    <script>
+        var back = document.querySelector('.go_back');
+        back.style.display = 'none';
+        var topoff = window.pageYOffset;
+
+        document.addEventListener('scroll', function() {
+            if (window.pageYOffset > 0) {
+                back.style.display = 'block';
+                // back.style.bottom = 1 + 'px';
+            } else {
+                back.style.display = 'none';
+                // back.style.position = 'absolute';
+            }
+        })
+    </script>
 
 </body>
 
