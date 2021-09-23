@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function countdown(time) {
+            var nowtime = +new Date;
+            var expectTime = +new Date(time);
+
+            var times_sec = (expectTime - nowtime) / 1000;
+            var gapDays = parseInt(times_sec / 60 / 60 / 24);
+            gapDays = gapDays < 10 ? '0' + gapDays : gapDays;
+            var gapHours = parseInt(times_sec / 60 / 60 % 24);
+            gapHours = gapHours < 10 ? '0' + gapHours : gapHours;
+            var gapMinutes = parseInt(times_sec / 60 % 60);
+            gapMinutes = gapMinutes < 10 ? '0' + gapMinutes : gapMinutes;
+            var gapSecons = parseInt(times_sec % 60);
+            gapSecons = gapSecons < 10 ? '0' + gapSecons : gapSecons;
+
+            return gapDays + ' Days ' + gapHours + ' Hours ' + gapMinutes + ' Mins ' + gapSecons + ' Sec';
+        }
+
+        console.log(countdown(new Date('2021-10-1 0:0:0')));
+    </script>
+</head>
+
+<body>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        console.log('ok');
+        var lis = document.getElementsByTagName('li');
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+    </script>
+</body>
+
+</html>
