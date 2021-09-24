@@ -29,6 +29,50 @@ function window_animate(obj, interval_time, callback) {
 
 }
 
+// floor elevator
+$(function() {
+    var flag = true;
+
+    // show and disappear
+    var appear = $(".you_like").offset().top;
+
+    function elevator() {
+        if ($(document).scrollTop() >= appear) {
+            $(".left-navbar").fadeIn();
+        } else {
+            $(".left-navbar").fadeOut();
+        }
+    }
+    elevator();
+    $(window).scroll(function() {
+        elevator();
+        if (flag) {
+            // current follow window scroll
+            $(".floor").children().each(function(i, ele) {
+                if ($(document).scrollTop() >= $(ele).offset().top - 200) {
+                    console.log($(document).scrollTop());
+                    $(".left-navbar li").eq(i).addClass('current').siblings().removeClass();
+                }
+            })
+        }
+    });
+
+    // floor scrool
+    $(".left-navbar li").click(function() {
+        flag = false;
+        var current = $(".floor").children().eq($(this).index()).offset().top;
+        $(".body, html").stop().animate({ scrollTop: current - 200 }, function() {
+            flag = true;
+        });
+
+        // bar current
+        $(this).addClass("current").siblings().removeClass();
+    });
+
+
+
+})
+
 window.addEventListener('load', function() {
     // left right disappear and show
     var left = document.querySelector('.prev');
@@ -179,11 +223,11 @@ window.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('scroll', function() {
         if (window.pageYOffset >= 200) {
             slide.style.position = 'fixed';
-            slide.style.top = 100 + 'px';
+            slide.style.top = 300 + 'px';
 
         } else if (window.pageYOffset < 200 || window.pageYOffset >= 1400) {
             slide.style.position = 'absolute';
-            slide.style.top = '300px';
+            slide.style.top = '500px';
         }
     })
 
@@ -199,37 +243,47 @@ window.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('scroll', function() {
         if (window.pageYOffset > 0) {
-            back.style.display = 'block';
+            $(".go_back").fadeIn();
+            // back.style.display = 'block';
             back.style.position = 'fixed';
         } else {
-            back.style.display = 'none';
+            // back.style.display = 'none';
+            $(".go_back").fadeOut();
         }
     })
 
-    var imgs = document.querySelectorAll('.table_list_item')[0].querySelectorAll('img')
-    var imgs_2 = document.querySelectorAll('.table_list_item')[1].querySelectorAll('img')
-    for (var i = 0; i < imgs.length; i++) {
-        imgs[i].addEventListener('mouseenter', function() {
-            for (var i = 0; i < imgs.length; i++) {
-                animate(this, 20);
-            }
-        })
-        imgs[i].addEventListener('mouseleave', function() {
-            for (var i = 0; i < imgs.length; i++) {
-                animate(this, 0);
-            }
-        })
+    // var imgs = document.querySelectorAll('.table_list_item')[0].querySelectorAll('img')
+    // var imgs_2 = document.querySelectorAll('.table_list_item')[1].querySelectorAll('img')
+
+    var imgs_box = document.querySelectorAll('.table_list_item');
+    for (var k = 0; k < imgs_box.length; k++) {
+        var imgs = imgs_box[k].querySelectorAll('img');
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].addEventListener('mouseenter', function() {
+                for (var i = 0; i < imgs.length; i++) {
+                    animate(this, 20);
+                    this.style.zIndex = 2;
+                }
+            })
+            imgs[i].addEventListener('mouseleave', function() {
+                for (var i = 0; i < imgs.length; i++) {
+                    animate(this, 0);
+                    this.style.zIndex = 1;
+                }
+            })
+        }
     }
-    for (var i = 0; i < imgs_2.length; i++) {
-        imgs_2[i].addEventListener('mouseenter', function() {
-            for (var i = 0; i < imgs_2.length; i++) {
-                animate(this, 20);
-            }
-        })
-        imgs_2[i].addEventListener('mouseleave', function() {
-            for (var i = 0; i < imgs_2.length; i++) {
-                animate(this, 0);
-            }
-        })
-    }
+
+    // for (var i = 0; i < imgs_2.length; i++) {
+    //     imgs_2[i].addEventListener('mouseenter', function() {
+    //         for (var i = 0; i < imgs_2.length; i++) {
+    //             animate(this, 20);
+    //         }
+    //     })
+    //     imgs_2[i].addEventListener('mouseleave', function() {
+    //         for (var i = 0; i < imgs_2.length; i++) {
+    //             animate(this, 0);
+    //         }
+    //     })
+    // }
 });

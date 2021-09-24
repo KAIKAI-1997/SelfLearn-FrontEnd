@@ -1,3 +1,8 @@
+.current {
+    background-color: #c81623;
+    color: #fff;
+}
+
 #mousefollow {
     position: absolute;
     height: 55px;
@@ -318,6 +323,10 @@ main .newsflash {
     margin-top: 30px;
 }
 
+.floor div {
+    margin-top: 30px;
+}
+
 .box_hd {
     height: 30px;
     border-bottom: 2px solid #c81623;
@@ -423,12 +432,12 @@ main .newsflash {
 
 .close_icon {
     position: absolute;
-    top: 0;
-    right: -11px;
+    top: -3px;
+    right: -13px;
     height: 18px;
     width: 11px;
-    font-size: 15px;
-    border: 1px solid black;
+    font-size: 16px;
+    color: black;
     cursor: pointer;
 }
 
@@ -466,10 +475,46 @@ main .newsflash {
     font-size: 60px;
 }
 
+.left-navbar {
+    position: fixed;
+    z-index: 11;
+    top: 300px;
+    left: 220px;
+    height: 180px;
+    width: 80px;
+    border-top: 1px solid #ccc;
+    display: none;
+}
+
+.left-navbar ul li {
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 13px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.left-navbar ul li:hover {
+    background-color: #ff5000;
+    color: #fff;
+}
+
+#close_leftbar {
+    position: absolute;
+    top: -7px;
+    right: -12px;
+    height: 12px;
+    width: 12px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 12px;
+}
+
 .slider-bar {
     position: absolute;
     z-index: 11;
-    top: 300px;
+    top: 500px;
     right: 300px;
     height: 180px;
     width: 35px;
